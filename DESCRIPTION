@@ -12,3 +12,5 @@ RoxygenNote: 7.3.2
 Imports: 
     dplyr,
     httr2
+URL: https://github.com/thaink2/th2analytics
+BugReports: https://github.com/thaink2/th2analytics/issues
