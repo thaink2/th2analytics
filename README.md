@@ -23,7 +23,7 @@ As a part of the time series forecasting, pre-processing plays a major role on t
   - Ensembling
   - Automatic or manual model tuning
 
-![forecasting](https://github.com/thaink2/th2analytics/blob/main/forecasting_demo.gif)
+![forecasting](https://github.com/thaink2/th2analytics/blob/main/images/forecasting_demo.gif)
 
 ### Use the forecasting API   {.tabset}
 
