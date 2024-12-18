@@ -9,4 +9,4 @@ You will an API key:
 
 ## Forecasting as a service 
 
-![forecasting]("./forecasting gif.gif")
+![forecasting](https://github.com/thaink2/th2analytics/blob/main/forecasting_demo.gif)
