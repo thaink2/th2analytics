@@ -34,6 +34,9 @@ As a part of the time series forecasting, pre-processing plays a major role on t
 
 import requests
 
+api_token = "*****" # get your token here: https://opensource.thaink2.com/app/th2token
+
+
 # API request preparation
 base_url = "https://apis-dev.thaink2.fr/"
 end_point = "thaink2/forecasting"
@@ -89,7 +92,6 @@ th2fcast <-  th2analytics::th2forecast_forecast_api(
   group_target = "variable",
   models_list = c("xgboost")) # xgboost, random_forest, arima
 ```
-
 
 
 
