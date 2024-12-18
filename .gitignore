@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+man/
+ml_llm_forecasting.html
+ml_llm_forecasting.qmd
+ml_llm_forecasting_files/*
+forecasting gif.gif

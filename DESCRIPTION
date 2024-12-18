@@ -1,0 +1,14 @@
+Package: th2analytics
+Type: Package
+Title: thaink2 open source analytics
+Version: 0.0.1
+Author: Farid Azouaou <conact@thaink2.com>
+Maintainer: Farid Azouaou <conact@thaink2.com>
+Description: Open source modules and functions that enables to use thaink2 services including forecasting, mlops and so on
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
+Imports: 
+    dplyr,
+    httr2
