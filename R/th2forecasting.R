@@ -30,6 +30,7 @@ th2forecast_forecast_api <- function(
   }
 
   # API request preparation
+
   end_point <- "thaink2/forecasting"
   req_body <- list(
     "actuals" = input_data,
