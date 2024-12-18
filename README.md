@@ -3,7 +3,7 @@ thaink² put at the disposal of technical community  a useful package to explore
 
 ## Authentication 
 
-You will an API key:  
+You will an API key
 
 * [thaink2 API token](https://opensource.thaink2.com/app/th2token)
 
