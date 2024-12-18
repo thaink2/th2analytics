@@ -9,4 +9,25 @@ You will an API key:
 
 ## Forecasting as a service 
 
+As a part of the time series forecasting, pre-processing plays a major role on the output quality. 
+
+* Pre-processing
+  - Anomaly detection & correction
+  - Missing values interpolation 
+  - Level shift detection & correction
+
+
+* Modeling:
+
+  - Multiple choices of models
+  - Ensembling
+  - Automatic or manual model tuning
+
 ![forecasting](https://github.com/thaink2/th2analytics/blob/main/forecasting_demo.gif)
+
+### Use the forecasting API   {.tabset}
+
+#### python
+
+
+#### R
