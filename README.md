@@ -9,4 +9,4 @@ You will an API key:
 
 ## Forecasting as a service 
 
-![forecasting](forecasting gif.gif]
+![forecasting]("./forecasting gif.gif")
