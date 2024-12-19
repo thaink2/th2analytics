@@ -31,49 +31,35 @@ As a part of the time series forecasting, pre-processing plays a major role on t
 
 
 ```python
-
-import requests
-import pandas as pd
+from th2analytics.forecasting import ForecastingAPI
 import numpy as np
+import pandas as pd
 
 api_token = "************" # get your token here: https:\\opensource.thaink2.com\app\th2token
-# Generate random time-series data
 
-# API request preparation
+
+# Initialize the API wrapper
+api = ForecastingAPI(
+    base_url = "https://apis-dev.thaink2.fr/",
+    api_token = api_token
+)
+
 np.random.seed(42)
 dates = pd.date_range(start='2022-01-01', periods=100, freq='D')
 values = np.random.randn(100).cumsum()
 # Create a DataFrame from the generated data
 input_data = pd.DataFrame({'date': dates, 'value': values})
-
-# API request preparation
-base_url = "https://apis-dev.thaink2.fr/"
-end_point = "thaink2/forecasting"
-
-req_url = f"{base_url}{end_point}"
-
-req_body = {
-    "actuals": input_data.to_json(orient="records", date_format = "iso"),
-    "fcast_horizon": 30,
- #   "group_target": group_target,
-    "target_var": "value",
-    "date_var": "date",
-    "models_list": ["xgboost"]
-}
-
-# Make the API request
-headers = {
-    "Authorization": f"Bearer {api_token}",
-    "Content-Type": "application/json"
-}
-response = requests.post(req_url, json=req_body, headers=headers)
-# Process the response
-if response.status_code == 200:
-    forecast_resp = response.json()  # Assuming the response is JSON
-    print("Response:", forecast_resp)
-else:
-    print(f"Error: {response.status_code} - {response.text}")
-
+# Generate the forecast
+forecast = api.th2forecast_api(
+    actuals = input_data,
+    fcast_horizon = 30,
+    group_target = None,
+    target_var = "value",
+    date_var = "date",
+    models_list = ["xgboost"]
+)
+# Print the forecast
+print("Forecast Results:", forecast)
 ```
 
 #### Using R
@@ -93,7 +79,7 @@ api_token <- "*****" # get your token here: https://opensource.thaink2.com/app/t
 
 historical_data <- ggplot2::economics_long
 
-th2fcast <-  th2analytics::th2forecast_forecast_api(
+th2fcast <-  th2analytics::th2forecast_api(
   input_data = historical_data,
   api_token = api_token,
   fcast_horizon = 30,
