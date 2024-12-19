@@ -3,3 +3,5 @@
 images
 ^LICENSE\.md$
 dev
+^revdep$
+^cran-comments\.md$
