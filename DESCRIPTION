@@ -2,7 +2,10 @@ Type: Package
 Package: th2analytics
 Title: Thaink2 Open Source Analytics
 Version: 0.0.1
-Author: Farid Azouaou<contact@thaink2.com>
+Authors@R: person(given = "Farid",
+                    family = "Azouaou",
+                    role = c("aut", "cre"),
+                    email = "contact@thaink2.com")
 Maintainer: Farid Azouaou<contact@thaink2.com>
 Description: Open source modules and functions that enable usage of
     thaink2 services such as forecasting, mlops and analytics.
