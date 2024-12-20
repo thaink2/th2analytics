@@ -1,23 +1,28 @@
-thaink² put at the disposal of technical community  a useful package to explore and make use of analytics functionalities. 
+
+## About
+
+**thaink²**  is a startup specializing in AI-driven time series forecasting and data solutions, empowering businesses to transform raw data into actionable insights effortlessly.
+
+It puts at the disposal of technical community  and SDK, where they can unlock the full potential of advanced predictive analytics to make data-driven decisions with confidence ( Machine learning, time series forecasting)
 
 
 ## Authentication 
 
-You will an API key
+You will need an API key in order to be able to request the API, the key can be generated using the following link: 
 
-* [thaink2 API token](https://opensource.thaink2.com/app/th2token)
+* [https://opensource.thaink2.com/app/th2token](https://opensource.thaink2.com/app/th2token)
 
 ## Forecasting as a service 
 
 As a part of the time series forecasting, pre-processing plays a major role on the output quality. 
 
-* Pre-processing
+### Pre-processing
   - Anomaly detection & correction
   - Missing values interpolation 
   - Level shift detection & correction
 
 
-* Modeling:
+### Modeling:
 
   - Multiple choices of models
   - Ensembling
@@ -25,48 +30,13 @@ As a part of the time series forecasting, pre-processing plays a major role on t
 
 ![forecasting](https://github.com/thaink2/th2analytics/blob/main/images/forecasting_demo.gif)
 
-### The API
 
-#### Using python
+### The API: example
 
-
-```python
-from th2analytics.forecasting import ForecastingAPI
-import numpy as np
-import pandas as pd
-
-api_token = "************" # get your token here: https:\\opensource.thaink2.com\app\th2token
-
-
-# Initialize the API wrapper
-api = ForecastingAPI(
-    base_url = "https://apis-dev.thaink2.fr/",
-    api_token = api_token
-)
-
-np.random.seed(42)
-dates = pd.date_range(start='2022-01-01', periods=100, freq='D')
-values = np.random.randn(100).cumsum()
-# Create a DataFrame from the generated data
-input_data = pd.DataFrame({'date': dates, 'value': values})
-# Generate the forecast
-forecast = api.th2forecast_api(
-    actuals = input_data,
-    fcast_horizon = 30,
-    group_target = None,
-    target_var = "value",
-    date_var = "date",
-    models_list = ["xgboost"]
-)
-# Print the forecast
-print("Forecast Results:", forecast)
-```
-
-#### Using R
 
 First install the following package
 
-[th2analytics](https://github.com/thaink2/th2analytics) using the command
+[https://github.com/thaink2/th2analytics](https://github.com/thaink2/th2analytics) using the command
 
 ```r
 remotes::install_github("thaink2/th2analytics")

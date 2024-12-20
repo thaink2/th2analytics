@@ -6,8 +6,8 @@ Authors@R: person(given = "Farid",
                     family = "Azouaou",
                     role = c("aut", "cre"),
                     email = "contact@thaink2.com")
-Description: Open source modules and functions that enable usage of
-    thaink2 services such as forecasting, mlops and analytics.
+Description: A Software Development Kit for machine learning and forecasting, developed by thaink², 
+  enabling seamless access to analytics pool (time series forecasting) via APIs. 
 License: MIT + file LICENSE
 URL: https://github.com/thaink2/th2analytics
 BugReports: https://github.com/thaink2/th2analytics/issues
