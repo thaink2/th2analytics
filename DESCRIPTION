@@ -2,10 +2,11 @@ Type: Package
 Package: th2analytics
 Title: Thaink2 Open Source Analytics
 Version: 0.0.1
-Authors@R: person(given = "Farid",
+Authors@R:c(person(given = "Farid",
                     family = "Azouaou",
                     role = c("aut", "cre"),
-                    email = "contact@thaink2.com")
+                    email = "farid.azouaou@thaink2.com"),
+                    person("thaink²", role = "cph", comment = "Copyright held by 'thaink²'"))
 Description: A Software Development Kit for machine learning and forecasting, developed by thaink², 
   enabling seamless access to analytics pool (time series forecasting) via APIs. 
 License: MIT + file LICENSE

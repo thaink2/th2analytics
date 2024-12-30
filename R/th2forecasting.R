@@ -54,13 +54,14 @@ th2forecast_api <- function(
 
   forecast_resp <- forecast_req %>%
     httr2::req_perform()
-
+  forecast_resp2 <<- forecast_resp
   # Error handling
   httr2::resp_check_status(forecast_resp)
 
   # Parse the response
-  forecast_result <- httr2::resp_body_json() %>%
-    do.call(dplyr::bind_rows, forecast_resp)
+  forecast_result <- forecast_resp%>%
+    httr2::resp_body_json() %>%
+    do.call(dplyr::bind_rows, .)
 
   # Check and mutate .index column
   temp_var <- ".index"
@@ -72,3 +73,4 @@ th2forecast_api <- function(
 
   return(forecast_result)
 }
+
