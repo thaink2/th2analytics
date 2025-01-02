@@ -2,7 +2,7 @@ Type: Package
 Package: th2analytics
 Title: Thaink2 Open Source Analytics
 Version: 0.0.1
-Authors@R:c(person(given = "Farid",
+Authors@R: c(person(given = "Farid",
                     family = "Azouaou",
                     role = c("aut", "cre"),
                     email = "farid.azouaou@thaink2.com"),
@@ -15,6 +15,7 @@ BugReports: https://github.com/thaink2/th2analytics/issues
 Imports: 
     dplyr,
     httr2,
+    jsonlite,
     lubridate,
     magrittr
 Encoding: UTF-8

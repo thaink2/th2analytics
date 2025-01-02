@@ -54,7 +54,6 @@ th2forecast_api <- function(
 
   forecast_resp <- forecast_req %>%
     httr2::req_perform()
-  forecast_resp2 <<- forecast_resp
   # Error handling
   httr2::resp_check_status(forecast_resp)
 
@@ -73,4 +72,3 @@ th2forecast_api <- function(
 
   return(forecast_result)
 }
-
