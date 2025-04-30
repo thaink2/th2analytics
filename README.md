@@ -10,7 +10,7 @@ It puts at the disposal of technical community  and SDK, where they can unlock t
 
 You will need an API key in order to be able to request the API, the key can be generated using the following link: 
 
-* [https://opensource.thaink2.com/app/th2token](https://opensource.thaink2.com/app/th2token)
+* [https://clever.thaink2.fr/app_direct/th2token/](https://clever.thaink2.fr/app_direct/th2token/)
 
 ## Forecasting as a service 
 
@@ -45,7 +45,7 @@ remotes::install_github("thaink2/th2analytics")
 Prepare your data and call the forecasting API, as illustrated below:
 
 ```r
-api_token <- "*****" # get your token here: https://opensource.thaink2.com/app/th2token
+api_token <- "*****" # get your token here: https://clever.thaink2.fr/app_direct/th2token/
 
 historical_data <- ggplot2::economics_long
 
