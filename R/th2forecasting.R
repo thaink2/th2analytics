@@ -7,7 +7,7 @@
 #' @param group_target A grouping variable for
 #' the forecast, optional.
 #' @param base_url Base URL of the API
-#' (default: "https://apis-dev.thaink2.fr/").
+#' (default: "https://clever.thaink2.fr/app_direct/th2apis/private/").
 #' @param api_token The bearer token for API authentication.
 #' @param fcast_horizon Forecast horizon,
 #' specifying how many periods to forecast (default: 30).
@@ -20,7 +20,7 @@
 th2forecast_api <- function(
   input_data,
   group_target = NULL,
-  base_url = "https://apis-dev.thaink2.fr/",
+  base_url = "https://clever.thaink2.fr/app_direct/th2apis/private/",
   api_token,
   fcast_horizon = 30,
   target_var,
